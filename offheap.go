@@ -2,7 +2,7 @@
 // Use of this source code is governed by a BSD-style
 // license that can be found in the LICENSE file.
 
-// Package offheap provides a way to grab and use a chunk of system memory.
+// Package offheap provides a way to use system memory directly.
 package offheap
 
 import (
@@ -10,8 +10,9 @@ import (
 )
 
 // Memory represents a private anonymous mmap in-memory-only
-// file that your program can use to read and write bytes
-// without dealing with large heap issues.
+// file that your program can use to read and write bytes.
+// This allows your program to use very large amounts of memory
+// without the Go runtime trying to garbage collect it.
 type Memory []byte
 
 // New creates an offheap Memory slice of the specified number of bytes.
