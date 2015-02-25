@@ -4,6 +4,9 @@ Allocate system memory as if it were a []byte.
 
 Useful for allocating massive buffers off of Go's heap, which would otherwise consume a lot of resources.
 
+### Install
+     go get github.com/shoenig/offheap
+
 ### Example
 
     package main
