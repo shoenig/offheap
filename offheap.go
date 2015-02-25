@@ -1,8 +1,7 @@
 package offheap
 
 import (
-	// todo open source version
-	"indeed/gophers/3rdparty/p/launchpad.net/gommap"
+	"launchpad.net/gommap"
 )
 
 type Memory gommap.MMap // use like []byte
