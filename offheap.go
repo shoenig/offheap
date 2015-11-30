@@ -6,7 +6,7 @@
 package offheap
 
 import (
-	"launchpad.net/gommap"
+	"github.com/tysontate/gommap"
 )
 
 // Memory represents a private anonymous mmap in-memory-only
