@@ -1,0 +1,13 @@
+language: go
+
+go:
+- 1.x
+
+install:
+  - go get github.com/tysontate/gommap
+
+script:
+  - go build ./...
+  - go vet ./...
+  - go test ./...
+  - go test -race ./...
