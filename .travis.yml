@@ -1,13 +1,13 @@
 language: go
 
 go:
-  - 1.x
+  - 1.12.x
 
 install:
-  - go get github.com/tysontate/gommap
+  - echo "no install step"
 
 script:
   - go build ./...
   - go vet ./...
-  - go test ./...
+  - go build ./...
   - go test -race ./...
