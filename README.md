@@ -1,44 +1,66 @@
-# offheap
+offheap
+=======
 
-Allocate offheap memory in Go programs.
+Allocate offheap memory in Go programs
 
-[![Go Report Card](https://goreportcard.com/badge/github.com/shoenig/offheap)](https://goreportcard.com/report/github.com/shoenig/offheap) [![Build Status](https://travis-ci.org/shoenig/offheap.svg?branch=master)](https://travis-ci.org/shoenig/offheap) [![GoDoc](https://godoc.org/github.com/shoenig/offheap?status.svg)](https://godoc.org/github.com/shoenig/offheap) [![License](https://img.shields.io/github/license/shoenig/offheap.svg?style=flat-square)](LICENSE)
+[![Go Report Card](https://goreportcard.com/badge/go.gophers.dev/pkgs/loggy)](https://goreportcard.com/report/go.gophers.dev/pkgs/loggy)
+[![Build Status](https://travis-ci.com/shoenig/loggy.svg?branch=master)](https://travis-ci.com/shoenig/loggy)
+[![GoDoc](https://godoc.org/go.gophers.dev/pkgs/loggy?status.svg)](https://godoc.org/go.gophers.dev/pkgs/loggy)
+![NetflixOSS Lifecycle](https://img.shields.io/osslifecycle/shoenig/loggy.svg)
+![GitHub](https://img.shields.io/github/license/shoenig/loggy.svg)
 
-Useful for allocating massive buffers off of Go's heap, which would otherwise incur 
-expensive garbage collection busywork.
+# Project Overview
 
-### Install
-     go get github.com/shoenig/offheap
+Package `offheap` provides a simple library for allocating offheap memory in
+Go programs. Doing so is useful for allocating large `[]byte` that should not
+be managed by the garbage collector.
 
-### Example
+# Getting Started
 
-	```go
-    package main
+The `offheap` package can be installed by running
 
-    import (
-    	"fmt"
+```bash
+go get go.gophers.dev/pkgs/offheap
+ ```
 
-	    "github/shoenig/offheap"
-    )
+#### Example Usage
 
-    func main() {
-    	var m offheap.Memory 
-	    var e error
-	
-	    // allocate 5 MB
-	    if m, e = offheap.New(5 * 1024 * 1024); e != nil {
-    		panic(e)
-	    } 
-	    fmt.Println("m[0]", m[0])
+```go
+package main
 
-	    m[0] = 42
-	    fmt.Println("m[0]", m[0])
+import (
+    "fmt"
 
-	    if e = m.Unmap(); e != nil {
-		    panic(e)
-	    }
-	    fmt.Println("finished")
+    "github/shoenig/offheap"
+)
+
+func main() {
+    var m offheap.Memory
+    var e error
+
+    // allocate 5 MB
+    if m, e = offheap.New(5 * 1024 * 1024); e != nil {
+        panic(e)
     }
-	```
+    fmt.Println("m[0]", m[0])
+
+    m[0] = 42
+    fmt.Println("m[0]", m[0])
+
+    if e = m.Unmap(); e != nil {
+        panic(e)
+    }
+    fmt.Println("finished")
+}
+```
+
+# Contributing
+
+Package `offheap` is pretty minimalist, and so it's basically feature complete.
+Bug fixes and good ideas though are always welcome, please just file an issue.
+
+# License
+
+The `go.gophers.dev/pkgs/offheap` module is open source under the [BSD-3-Clause](LICENSE) license.
 
 
