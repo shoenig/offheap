@@ -3,9 +3,9 @@ offheap
 
 Allocate offheap memory in Go programs
 
-[![Go Report Card](https://goreportcard.com/badge/go.gophers.dev/pkgs/offheap)](https://goreportcard.com/report/go.gophers.dev/pkgs/offheap)
+[![Go Report Card](https://goreportcard.com/badge/gophers.dev/pkgs/offheap)](https://goreportcard.com/report/gophers.dev/pkgs/offheap)
 [![Build Status](https://travis-ci.org/shoenig/offheap.svg?branch=master)](https://travis-ci.org/shoenig/offheap)
-[![GoDoc](https://godoc.org/go.gophers.dev/pkgs/offheap?status.svg)](https://godoc.org/go.gophers.dev/pkgs/offheap)
+[![GoDoc](https://godoc.org/gophers.dev/pkgs/offheap?status.svg)](https://godoc.org/gophers.dev/pkgs/offheap)
 ![NetflixOSS Lifecycle](https://img.shields.io/osslifecycle/shoenig/offheap.svg)
 ![GitHub](https://img.shields.io/github/license/shoenig/offheap.svg)
 
@@ -20,7 +20,7 @@ be managed by the garbage collector.
 The `offheap` package can be installed by running
 
 ```bash
-go get go.gophers.dev/pkgs/offheap
+go get gophers.dev/pkgs/offheap
  ```
 
 #### Example Usage
@@ -61,6 +61,6 @@ Bug fixes and good ideas though are always welcome, please just file an issue.
 
 # License
 
-The `go.gophers.dev/pkgs/offheap` module is open source under the [BSD-3-Clause](LICENSE) license.
+The `gophers.dev/pkgs/offheap` module is open source under the [BSD-3-Clause](LICENSE) license.
 
 
