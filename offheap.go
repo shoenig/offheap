@@ -6,7 +6,7 @@
 package offheap // import "gophers.dev/pkgs/offheap"
 
 import (
-	"github.com/tysontate/gommap"
+	"github.com/tysonmote/gommap"
 )
 
 // Memory represents a private anonymous mmap in-memory-only
