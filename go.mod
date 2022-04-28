@@ -1,3 +1,10 @@
 module gophers.dev/pkgs/offheap
 
-require github.com/tysontate/gommap v0.0.0-20131202084435-e87a6e482c2c
+go 1.18
+
+require (
+	github.com/shoenig/test v0.2.2
+	github.com/tysonmote/gommap v0.0.1
+)
+
+require github.com/google/go-cmp v0.5.8 // indirect
