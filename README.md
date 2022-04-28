@@ -4,7 +4,7 @@ offheap
 Allocate offheap memory in Go programs
 
 [![Go Report Card](https://goreportcard.com/badge/gophers.dev/pkgs/offheap)](https://goreportcard.com/report/gophers.dev/pkgs/offheap)
-[![Build Status](https://travis-ci.org/shoenig/offheap.svg?branch=master)](https://travis-ci.org/shoenig/offheap)
+[![run-ci](https://github.com/shoenig/offheap/actions/workflows/ci.yml/badge.svg)](https://github.com/shoenig/offheap/actions/workflows/ci.yml)
 [![GoDoc](https://godoc.org/gophers.dev/pkgs/offheap?status.svg)](https://godoc.org/gophers.dev/pkgs/offheap)
 ![NetflixOSS Lifecycle](https://img.shields.io/osslifecycle/shoenig/offheap.svg)
 ![GitHub](https://img.shields.io/github/license/shoenig/offheap.svg)
