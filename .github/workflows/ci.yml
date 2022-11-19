@@ -1,14 +1,13 @@
-name: run-ci
+name: Run CI Tests
 on: [push]
 jobs:
   run-tests:
-    runs-on: ubuntu-20.04
+    runs-on: ubuntu-22.04
     steps:
-      - uses: actions/checkout@v2
-      - uses: actions/setup-go@v2
+      - uses: actions/checkout@v3
+      - uses: hashicorp/setup-golang@v1
         with:
-          stable: true
-          go-version: 1.18.1
+          version-file: go.mod
       - name: Vet
         run: |
           go vet ./...

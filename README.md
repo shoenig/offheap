@@ -3,10 +3,6 @@ offheap
 
 Allocate offheap memory in Go programs
 
-[![Go Report Card](https://goreportcard.com/badge/gophers.dev/pkgs/offheap)](https://goreportcard.com/report/gophers.dev/pkgs/offheap)
-[![run-ci](https://github.com/shoenig/offheap/actions/workflows/ci.yml/badge.svg)](https://github.com/shoenig/offheap/actions/workflows/ci.yml)
-[![GoDoc](https://godoc.org/gophers.dev/pkgs/offheap?status.svg)](https://godoc.org/gophers.dev/pkgs/offheap)
-![NetflixOSS Lifecycle](https://img.shields.io/osslifecycle/shoenig/offheap.svg)
 ![GitHub](https://img.shields.io/github/license/shoenig/offheap.svg)
 
 # Project Overview
@@ -20,7 +16,7 @@ be managed by the garbage collector.
 The `offheap` package can be installed by running
 
 ```bash
-go get gophers.dev/pkgs/offheap
+go get github.com/shoenig/offheap
  ```
 
 #### Example Usage
@@ -61,6 +57,6 @@ Bug fixes and good ideas though are always welcome, please just file an issue.
 
 # License
 
-The `gophers.dev/pkgs/offheap` module is open source under the [BSD-3-Clause](LICENSE) license.
+The `github.com/shoenig/offheap` module is open source under the [BSD-3-Clause](LICENSE) license.
 
 

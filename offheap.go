@@ -3,7 +3,7 @@
 // license that can be found in the LICENSE file.
 
 // Package offheap provides a way to use system memory directly.
-package offheap // import "gophers.dev/pkgs/offheap"
+package offheap
 
 import (
 	"github.com/tysonmote/gommap"
