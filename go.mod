@@ -1,9 +1,9 @@
-module gophers.dev/pkgs/offheap
+module github.com/shoenig/offheap
 
 go 1.18
 
 require (
-	github.com/shoenig/test v0.2.2
+	github.com/shoenig/test v0.4.4
 	github.com/tysonmote/gommap v0.0.1
 )
 
