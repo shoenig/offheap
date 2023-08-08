@@ -6,7 +6,7 @@
 package offheap
 
 import (
-	"github.com/tysonmote/gommap"
+	"github.com/edsrzf/mmap-go"
 )
 
 // Memory represents a private anonymous mmap in-memory-only
@@ -17,12 +17,12 @@ type Memory []byte
 
 // New creates an offheap Memory slice of the specified number of bytes.
 func New(bytes int64) (Memory, error) {
-	mapped, e := gommap.MapRegion(
+	mapped, e := mmap.MapRegion(
+		nil,
+		int(bytes),
+		mmap.COPY,
+		mmap.ANON,
 		0,
-		0,
-		bytes,
-		gommap.PROT_READ|gommap.PROT_WRITE,
-		gommap.MAP_ANONYMOUS|gommap.MAP_PRIVATE,
 	)
 
 	if e != nil {
@@ -34,5 +34,6 @@ func New(bytes int64) (Memory, error) {
 // Unmap will delete the offheap Memory slice. Any usage of the Memory
 // afterwords will cause a panic.
 func (m Memory) Unmap() error {
-	return gommap.MMap(m).UnsafeUnmap()
+	p := mmap.MMap(m)
+	return p.Unmap()
 }
