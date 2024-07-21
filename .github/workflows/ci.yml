@@ -1,11 +1,20 @@
 name: Run CI Tests
-on: [push]
+on: [pull_request]
 jobs:
   run-tests:
-    runs-on: ubuntu-22.04
+    strategy:
+      fail-fast: false
+      matrix:
+        os:
+          - ubuntu-20.04
+          - ubuntu-22.04
+          - ubuntu-24.04
+          - macos-13
+          - macos-14
+    runs-on: ${{matrix.os}}
     steps:
       - uses: actions/checkout@v3
-      - uses: hashicorp/setup-golang@v1
+      - uses: hashicorp/setup-golang@v3
         with:
           version-file: go.mod
       - name: Vet
