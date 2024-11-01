@@ -3,7 +3,7 @@ module github.com/shoenig/offheap
 go 1.22
 
 require (
-	github.com/edsrzf/mmap-go v1.1.0
+	github.com/edsrzf/mmap-go v1.2.0
 	github.com/shoenig/test v1.8.2
 )
 
