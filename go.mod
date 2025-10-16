@@ -4,7 +4,7 @@ go 1.22
 
 require (
 	github.com/edsrzf/mmap-go v1.1.0
-	github.com/shoenig/test v1.8.2
+	github.com/shoenig/test v1.12.2
 )
 
 require (
